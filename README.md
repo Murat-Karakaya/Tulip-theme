@@ -1,27 +1,10 @@
 # Tulip theme
 
-Tulip is a [Material Design](https://material.io) theme for GNOME/GTK based desktop environments.
-
-Based on nana-4 -- [materia-theme](https://github.com/nana-4/materia-theme)
+Tulip is a [Material Design](https://material.io) theme made for Cinnamon desktop environment (often used by Linux Mint).
+It is ased on [Orchis-theme](https://github.com/vinceliuice/Orchis-theme)
 
 ![screenshot](images/screenshot.png?raw=true)
 
-## Requirements
-
-- GTK `>=3.20`
-- `gnome-themes-extra` (or `gnome-themes-standard`)
-- Murrine engine — The package name depends on the distro.
-  - `gtk-engine-murrine` on Arch Linux
-  - `gtk-murrine-engine` on Fedora
-  - `gtk2-engine-murrine` on openSUSE
-  - `gtk2-engines-murrine` on Debian, Ubuntu, etc.
-- `sassc` — build dependency
-
-## Donate
-
-If you like this project, consider supporting it with a coffee:
-
-<span class="paypal"><a href="https://www.paypal.me/vinceliuice" title="Donate to this project using Paypal"><img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" alt="PayPal donate button" /></a></span>
 
 ## Installation
 
@@ -57,7 +40,6 @@ OPTIONS:
                           5. macos              Change window buttons to macOS style
                           6. submenu            Set normal submenus color contrast (dark submenu style on dark version)
                           7. [nord|dracula]     Nord/dracula colorscheme themes (nord and dracula can not mix use!)
-                          8. dock               Fix style for 'dash-to-dock' or 'ubuntu-dock' extension
 
   --round                 Change theme round corner border-radius [Input the px value you want] (Suggested: 2px < value < 16px)
                           1. 3px
@@ -66,14 +48,6 @@ OPTIONS:
                           ...
                           13. 15px
 
-  --shell                 install gnome-shell version [38|40|42|44|46] (Without this option script will detect shell version and install the right theme)
-                          1. 38                 Gnome-shell version <= 38.0
-                          2. 40                 Gnome-shell version = 40.0
-                          3. 42                 Gnome-shell version = 42.0
-                          4. 44                 Gnome-shell version = 44.0
-                          5. 46                 Gnome-shell version = 46.0
-                          6. 47                 Gnome-shell version = 47.0
-                          7. 48                 Gnome-shell version = 48.0
 
   -r, --remove,
   -u, --uninstall         Uninstall/Remove installed themes
