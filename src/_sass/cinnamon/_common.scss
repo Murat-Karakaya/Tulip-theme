@@ -259,7 +259,8 @@ StScrollBar {
 // Tooltip
 //
 #Tooltip {
-  border-radius: $circular-radius;
+  border-radius: $small-radius;
+  border: 1px solid on($tooltip);
   padding: $space-size $space-size * 2;
   background-color: $tooltip;
   color: on($tooltip);
@@ -292,55 +293,27 @@ $submenu_item_radius: $popup-radius - $space-size;
     border-radius: $submenu_item_radius;
     background-gradient-direction: none;
     box-shadow: none;
-
-    @if $submenu_style == 'true' {
-      color: $text !important;
-      background-color: $fill !important;
-    } @else {
-      color: rgba(black, 0.75) !important;
-      background-color: if($variant == 'light', rgba(black, 0.10), rgba(white, 0.95)) !important;
-    }
+    border: 1px solid $text;
 
     .popup-menu-item {
-      @if $submenu_style == 'true' {
-        color: $text !important;
-      } @else {
-        color: rgba(black, 0.75) !important;
-      }
+      color: $text !important;
 
       &:active {
-        @if $submenu_style == 'true' {
-          color: $text !important;
-          background-color: $divider !important;
-        } @else {
-          color: rgba(black, 0.85) !important;
-          background-color: rgba(black, 0.2) !important;
-        }
+        color: $text !important;
+        background-color: $divider !important;
       }
 
       &:active .popup-inactive-menu-item {
-        @if $submenu_style == 'true' {
-          color: $text-disabled !important;
-        } @else {
-          color: rgba(black, 0.45) !important;
-        }
+        color: $text-disabled !important;
       }
 
       &:insensitive {
-        @if $submenu_style == 'true' {
-          color: $text-secondary-disabled !important;
-        } @else {
-          color: rgba(black, 0.35) !important;
-        }
+        color: $text-secondary-disabled !important;
       }
     }
 
     .popup-inactive-menu-item {
-      @if $submenu_style == 'true' {
-        color: $text-secondary-disabled !important;
-      } @else {
-        color: rgba(black, 0.35) !important;
-      }
+      color: $text-secondary-disabled !important;
     }
 
     StScrollBar {
@@ -444,9 +417,8 @@ $submenu_item_radius: $popup-radius - $space-size;
     spacing: 4px;
 
     &:dnd {
-      background-gradient-direction: vertical;
-      background-gradient-start: rgba(255,0,0,0.05);
-      background-gradient-end: rgba(255,0,0,0.2);
+      border-radius: 0px $small-radius $small-radius 0px;
+      background-color: rgba(255, 0, 0, 0.2);
     }
 
     &:ltr { padding-right: 4px; }
@@ -462,9 +434,8 @@ $submenu_item_radius: $popup-radius - $space-size;
 
   &Right {
     &:dnd {
-      background-gradient-direction: vertical;
-      background-gradient-start: rgba(0,0,255,0.05);
-      background-gradient-end: rgba(0,0,255,0.2);
+      border-radius: $small-radius 0px 0px $small-radius;
+      background-color: rgba(0, 0, 255, 0.2);
     }
 
     &:ltr { padding-left: $space-size; spacing: 0px; }
@@ -482,9 +453,8 @@ $submenu_item_radius: $popup-radius - $space-size;
     spacing: 4px;
 
     &:dnd {
-      background-gradient-direction: vertical;
-      background-gradient-start: rgba(0,255,0,0.05);
-      background-gradient-end: rgba(0,255,0,0.2);
+      border-radius: $small-radius;
+      background-color: rgba(0, 255, 0, 0.2);
     }
   }
 }
@@ -563,9 +533,17 @@ $submenu_item_radius: $popup-radius - $space-size;
   }
 }
 
+.window-border {
+  border: 3px solid $primary;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  /* Cover rounded corners and some bad adjustment gaps */
+  box-shadow: 0 0 0 1px $primary inset; 
+}
+
 .expo-workspaces-name-entry,
 .expo-workspaces-name-entry#selected {
-  height: 15px;
+  height: 12pt;
   border-radius: $corner-radius;
   font-size: 9pt;
   padding: 5px 8px;
@@ -573,12 +551,9 @@ $submenu_item_radius: $popup-radius - $space-size;
   @include entry(osd);
 
   &:focus {
-    border: 1px solid $primary;
-    background-color: $primary;
-    color: on($primary);
-    font-style: italic;
+    border: 2px solid $primary;
     transition-duration: 300;
-    selection-background-color: on($primary);
+    selection-background-color: $primary;
     selected-color: $primary;
   }
 }
@@ -1010,6 +985,7 @@ $submenu_item_radius: $popup-radius - $space-size;
 //
 #notification {
   border-radius: $window-radius;
+  border-top: 4px solid $primary;
   padding: $space-size*2;
   spacing-rows: $space-size*1.5;
   spacing-columns: $space-size*1.5;
@@ -1017,8 +993,8 @@ $submenu_item_radius: $popup-radius - $space-size;
   width: 28em;
   color: $text;
   background-color: rgba($base, 0.8);
-  box-shadow: 0 5px 12px rgba(black, 0.35);
-  margin: 7px 12px 17px 12px;
+  box-shadow: none;
+  margin: 0px 0px 17px 0px;
 
   .notification-button, .notification-icon-button {
     @extend %flat_button;
@@ -1040,7 +1016,10 @@ $submenu_item_radius: $popup-radius - $space-size;
       box-shadow: 0 3px 8px rgba(black, 0.15);
     }
 
-    &, &.multi-line-notification { color: $text; }
+    &, &.multi-line-notification { 
+      color: $text; 
+      border-top: 4px solid $primary;
+    }
 
     .notification-button, .notification-icon-button {
       @extend %flat_button;
@@ -1053,6 +1032,7 @@ $submenu_item_radius: $popup-radius - $space-size;
   &.multi-line-notification {
     padding-bottom: $space-size*2;
     color: $text;
+    border-top: 4px solid $primary;
   }
 
   &-scrollview {
@@ -1072,6 +1052,7 @@ $submenu_item_radius: $popup-radius - $space-size;
   &-with-image {
     min-height: 159px;
     color: $text;
+    border-top: 4px solid $primary;
   }
 
   &-button, &-icon-button {
@@ -1685,7 +1666,6 @@ $submenu_item_radius: $popup-radius - $space-size;
       background-gradient-direction: vertical;
       background-gradient-start: $success;
       background-gradient-end: $success;
-      border-radius: $corner-radius;
       box-shadow: none;
     }
   }
@@ -2206,6 +2186,7 @@ $submenu_item_radius: $popup-radius - $space-size;
 
   &:highlight {
     background-color: transparentize($error, 0.5);
+    border-radius: $small-radius;
   }
 
   &-with-borders {
@@ -2216,20 +2197,20 @@ $submenu_item_radius: $popup-radius - $space-size;
 
     &:highlight {
       background-color: transparentize($error, 0.5);
+      border-radius: $small-radius;
     }
   }
 
   &-with-borders-and-header {
     color: on($tooltip);
     background-color: $tooltip;
-    border-radius: 6px;
-    border-radius-topleft: 0;
-    border-radius-topright: 0;
+    border-radius: $small-radius;
     padding: 12px;
     padding-bottom: 17px;
 
     &:highlight {
       background-color: transparentize($error, 0.5);
+      border-radius: $small-radius;
     }
   }
   &-header {
@@ -2245,6 +2226,7 @@ $submenu_item_radius: $popup-radius - $space-size;
   &-drag-placeholder {
     border: 2px solid $primary;
     background-color: transparentize($primary, 0.7);
+    border-radius: $small-radius;
   }
 }
 
@@ -2278,6 +2260,7 @@ $submenu_item_radius: $popup-radius - $space-size;
 .tile-hud, .tile-hud.snap {
   background-color: transparentize($primary, 0.7);
   border: 1px solid $primary;
+  border-radius: $small-radius;
 }
 
 //
