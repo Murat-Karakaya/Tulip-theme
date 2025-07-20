@@ -1,5 +1,7 @@
 #! /usr/bin/env bash
 
+cd "$(dirname "$0")" || exit
+
 for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-Grey'; do
   for type in '' '-Nord' '-Dracula'; do
     case "$theme" in

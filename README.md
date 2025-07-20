@@ -1,6 +1,6 @@
-# Orchis theme
+# Tulip theme
 
-Orchis is a [Material Design](https://material.io) theme for GNOME/GTK based desktop environments.
+Tulip is a [Material Design](https://material.io) theme for GNOME/GTK based desktop environments.
 
 Based on nana-4 -- [materia-theme](https://github.com/nana-4/materia-theme)
 
@@ -39,7 +39,7 @@ Run the following commands in the terminal:
 ```
 OPTIONS:
   -d, --dest DIR          Specify destination directory (Default: $HOME/.themes)
-  -n, --name NAME         Specify theme name (Default: Orchis)
+  -n, --name NAME         Specify theme name (Default: Tulip)
 
   -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|all] (Default: blue)
   -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)s)
@@ -48,9 +48,6 @@ OPTIONS:
   -i, --icon VARIANT      Specify icon variant(s) for shell panel activities button
                           [default|apple|simple|gnome|ubuntu|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin|endeavouros|tux|nixos|gentoo|budgie|solus]
                           (Default: ChromeOS style)
-
-  -l, --libadwaita        Link installed Orchis gtk-4.0 theme to config folder for all libadwaita app use Orchis theme
-  -f, --fixed             Fixed accent(blue) color for gnome-shell >= 47 libadwaita theme
 
   --tweaks                Specify versions for tweaks [solid|compact|black|primary|macos|submenu|(nord/dracula)] (Options can mix)
                           1. solid              No transparency panel variant
@@ -86,7 +83,7 @@ OPTIONS:
 
 > For more information, run: `./install.sh -h`
 
-## Tweaks for Orchis
+## Tweaks for Tulip
 
 ![tweaks-view](images/tweaks-view.png?raw=true)
 
