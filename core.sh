@@ -85,6 +85,7 @@ install() {
   if [[ "$primary" == 'true' ]]; then
     cp -r "$SRC_DIR/cinnamon/theme$theme$ctype/checkbox${ELSE_DARK:-}.svg"                   "$THEME_DIR/cinnamon/assets/checkbox.svg"
     cp -r "$SRC_DIR/cinnamon/theme$theme$ctype/radiobutton${ELSE_DARK:-}.svg"                "$THEME_DIR/cinnamon/assets/radiobutton.svg"
+    cp -r "$SRC_DIR/cinnamon/theme$theme$ctype/toggle-off${ELSE_DARK:-}.svg"                "$THEME_DIR/cinnamon/assets/toggle-off.svg"
   fi
 
   sassc $SASSC_OPT "$SRC_DIR/cinnamon/cinnamon${ELSE_DARK:-}$size.scss"                      "$THEME_DIR/cinnamon/cinnamon.css"
