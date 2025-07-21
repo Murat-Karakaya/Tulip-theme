@@ -288,6 +288,8 @@ $submenu_item_radius: $popup-radius - $space-size;
     background-gradient-direction: none;
     box-shadow: none;
     border: 1px solid $text;
+    color: $text !important;
+    background-color: $fill !important;
 
     .popup-menu-item {
       color: $text !important;
@@ -1645,6 +1647,7 @@ $submenu_item_radius: $popup-radius - $space-size;
       background-gradient-direction: vertical;
       background-gradient-start: $success;
       background-gradient-end: $success;
+      border-radius: 0px $small-radius $small-radius 0px;
       box-shadow: none;
     }
   }
@@ -1860,8 +1863,8 @@ $submenu_item_radius: $popup-radius - $space-size;
   margin-top: 6px;
   border-radius: $submenu_item_radius;
 
-  color: $text !important;
-  background-color: $fill !important;
+    color: $text !important;
+    background-color: $fill !important;
 
   > StBoxLayout:first-child {
     padding: 5px 10px 10px 10px;
