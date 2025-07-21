@@ -30,10 +30,9 @@ OPTIONS:
 
   --tweaks                Specify versions for tweaks [solid|compact|black|primary|macos|(nord/dracula)] (Options can mix)
                           1. solid              No transparency panel variant
-                          2. compact            No floating panel variant
+                          2. compact            Smaller icons in panel variant
                           3. black              Full black variant
                           4. primary            Change radio icon checked color to primary theme color (Default is Green)
-                          5. macos              Change window buttons to macOS style
                           6. [nord|dracula]     Nord/dracula colorscheme themes (nord and dracula can not mix use!)
 
   --round                 Change theme round corner border-radius [Input the px value you want] (Suggested: 2px < value < 16px)

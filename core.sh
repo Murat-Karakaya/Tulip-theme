@@ -135,10 +135,6 @@ install_black() {
   sed -i "/\$blackness:/s/false/true/" $SRC_DIR/_sass/_tweaks-temp.scss
 }
 
-install_mac() {
-  sed -i "/\$mac_style:/s/false/true/" $SRC_DIR/_sass/_tweaks-temp.scss
-}
-
 round_corner() {
   sed -i "/\$default_corner:/s/12px/${corner}/" $SRC_DIR/_sass/_tweaks-temp.scss
 }
@@ -206,10 +202,6 @@ theme_tweaks() {
 
   if [[ "$round" == "true" ]] ; then
     round_corner
-  fi
-
-  if [[ "$macstyle" == "true" ]] ; then
-    install_mac
   fi
 
   if [[ "$nord" == "true" ]] ; then
