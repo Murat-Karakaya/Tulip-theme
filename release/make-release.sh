@@ -2,7 +2,7 @@
 
 THEME_DIR=$(cd $(dirname $0) && pwd)
 
-THEME_NAME=Orchis
+THEME_NAME=Tulip
 
 _COLOR_VARIANTS=('' '-Light' '-Dark')
 _COMPA_VARIANTS=('' '-Compact')

@@ -3,12 +3,6 @@
 
 $colorscheme: 'default';
 
-// Gnome-shell panel style
-$panel_style: 'float';
-
-// Gnome-shell Activities style
-$activities: 'normal';
-
 // transparent opacity
 $opacity: 'default';
 
@@ -21,9 +15,6 @@ $theme: 'default';
 // Check and radio primary color
 $check_radio: 'default';
 
-// Windows button style
-$mac_style: 'false';
-
 // Default corner radius value
 $default_corner: 12px;
 
@@ -34,12 +25,3 @@ $corner_style: 'default';
 } @else {
   $corner_style: 'square';
 }
-
-// Default sub-menu styling
-$submenu_style: 'false';
-
-// Gnome version
-$gnome_version: 'old';
-
-// Accent type
-$accent_type: 'default';

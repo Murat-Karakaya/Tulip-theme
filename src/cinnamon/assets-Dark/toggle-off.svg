@@ -1,126 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   width="44"
-   height="26"
-   id="svg2"
-   version="1.1"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   sodipodi:docname="toggle-off.svg"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <defs
-     id="defs4">
-    <filter
-       inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
-       id="filter932"
-       x="-0.147"
-       y="-0.147"
-       width="1.294"
-       height="1.294">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="1.225"
-         id="feGaussianBlur934" />
-    </filter>
-  </defs>
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#212121"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="5.0786474"
-     inkscape:cx="-12.207975"
-     inkscape:cy="5.6117304"
-     inkscape:document-units="px"
-     inkscape:current-layer="g519"
-     showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1000"
-     inkscape:window-x="0"
-     inkscape:window-y="44"
-     inkscape:window-maximized="1"
-     inkscape:document-rotation="0"
-     inkscape:showpageshadow="2"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#5a5a5a">
-    <inkscape:grid
-       type="xygrid"
-       id="grid2985"
-       empspacing="5"
-       visible="true"
-       enabled="true"
-       snapvisiblegridlinesonly="true"
-       originx="0"
-       originy="0" />
-  </sodipodi:namedview>
-  <metadata
-     id="metadata7">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <cc:license
-           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
-      </cc:Work>
-      <cc:License
-         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#Reproduction" />
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#Distribution" />
-        <cc:requires
-           rdf:resource="http://creativecommons.org/ns#Notice" />
-        <cc:requires
-           rdf:resource="http://creativecommons.org/ns#Attribution" />
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
-        <cc:requires
-           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
-      </cc:License>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-1032.3622)">
-    <g
-       id="g519"
-       transform="matrix(-1,0,0,1,42,0)">
-      <rect
-         x="1"
-         y="1037.3622"
-         width="32"
-         height="14"
-         rx="7"
-         ry="7"
-         id="rect7"
-         style="opacity:0.15;fill:#ffffff;fill-opacity:1" />
-      <circle
-         cx="29"
-         cy="1045.3622"
-         r="10"
-         fill="#1a73e8"
-         id="circle376"
-         style="opacity:0.25;fill:#000000;fill-opacity:1;stroke-width:1;filter:url(#filter932)" />
-      <circle
-         cx="29"
-         cy="1044.3622"
-         r="10"
-         id="circle14"
-         style="fill:#2f2f2f;fill-opacity:1;stroke-width:1" />
-    </g>
-  </g>
+<svg width="44" height="26" viewBox="0 0 44 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.15" d="M16 5H34C37.866 5 41 8.13401 41 12C41 15.866 37.866 19 34 19H16C12.134 19 9 15.866 9 12C9 8.13401 12.134 5 16 5Z" fill="white"/>
+<g opacity="0.25" filter="url(#filter0_f_5_6)">
+<path d="M13 23C7.47715 23 3 18.5228 3 13C3 7.47715 7.47715 3 13 3C18.5228 3 23 7.47715 23 13C23 18.5228 18.5228 23 13 23Z" fill="#d8d8d8ff"/>
+</g>
+<path d="M13 22C7.47715 22 3 17.5228 3 12C3 6.47715 7.47715 2 13 2C18.5228 2 23 6.47715 23 12C23 17.5228 18.5228 22 13 22Z" fill="#d8d8d8ff"/>
+<path d="M17.2426 7.75735C16.8509 7.36561 16.2202 7.36561 15.8284 7.75735L13.7071 9.87867C13.3166 10.2692 12.6834 10.2692 12.2929 9.87867L10.1716 7.75735C9.77984 7.36561 9.1491 7.36561 8.75736 7.75735C8.36562 8.14908 8.36562 8.77982 8.75736 9.17156L10.8787 11.2929C11.2692 11.6834 11.2692 12.3166 10.8787 12.7071L8.75736 14.8284C8.36562 15.2202 8.36562 15.8509 8.75736 16.2426C9.1491 16.6344 9.77984 16.6344 10.1716 16.2426L12.2929 14.1213C12.6834 13.7308 13.3166 13.7308 13.7071 14.1213L15.8284 16.2426C16.2202 16.6344 16.8509 16.6344 17.2426 16.2426C17.6344 15.8509 17.6344 15.2202 17.2426 14.8284L15.1213 12.7071C14.7308 12.3166 14.7308 11.6834 15.1213 11.2929L17.2426 9.17156C17.6344 8.77982 17.6344 8.14908 17.2426 7.75735ZM18.6569 17.6568C17.1566 19.1571 15.1217 20 13 20C10.8783 20 8.84344 19.1571 7.34315 17.6568C5.84285 16.1566 5 14.1217 5 12C5 9.87825 5.84285 7.84342 7.34315 6.34313C8.84344 4.84284 10.8783 3.99999 13 3.99999C15.1217 3.99999 17.1566 4.84284 18.6569 6.34313C20.1571 7.84342 21 9.87826 21 12C21 14.1217 20.1571 16.1566 18.6569 17.6568Z" fill="#343434ff"/>
+<defs>
+<filter id="filter0_f_5_6" x="0.55" y="0.55" width="24.9" height="24.9" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="1.225" result="effect1_foregroundBlur_5_6"/>
+</filter>
+</defs>
 </svg>
