@@ -1863,8 +1863,8 @@ $submenu_item_radius: $popup-radius - $space-size;
   margin-top: 6px;
   border-radius: $submenu_item_radius;
 
-    color: $text !important;
-    background-color: $fill !important;
+  color: $text !important;
+  background-color: $fill !important;
 
   > StBoxLayout:first-child {
     padding: 5px 10px 10px 10px;
@@ -1887,7 +1887,7 @@ $submenu_item_radius: $popup-radius - $space-size;
 
   &-overlay {
     width: 290px;
-    height: 80px;
+    min-height: 80px;
     padding: $space-size*2 $space-size*3;
     spacing: $space-size;
     background-color: rgba(black, 0.45);
@@ -1911,7 +1911,7 @@ $submenu_item_radius: $popup-radius - $space-size;
       &:hover { background-color: on(dark, divider); }
       &:active { background-color: on(dark, track); }
       &:insensitive {
-        opacty: 0.35;
+        opacity: 0.35;
         color: on(dark, disabled);
       }
     }
@@ -1926,7 +1926,7 @@ $submenu_item_radius: $popup-radius - $space-size;
   .slider {
     height: 0.5em;
     padding: 0;
-    border: 0px solid darken($tooltip, 8%);
+    border: none;
     border-bottom: 1px;
     -slider-height: 0.5em;
     -slider-background-color: if($variant == 'light', $divider, darken($background, 5%));
@@ -1934,7 +1934,6 @@ $submenu_item_radius: $popup-radius - $space-size;
     -slider-active-background-color: $primary;
     -slider-active-border-color: rgba(0,0,0,0);
     -slider-border-width: 0px;
-    -slider-handle-radius: 0px;
   }
 }
 
