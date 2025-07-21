@@ -8,26 +8,20 @@ cat << EOF
 Usage: $0 [OPTION]...
 
 OPTIONS:
-  -d, --dest DIR          Specify destination directory (Default: $DEST_DIR)
-  -n, --name NAME         Specify theme name (Default: $THEME_NAME)
+  -d, --dest DIR          Specify destination directory (Default: $HOME/.themes)
+  -n, --name NAME         Specify theme name (Default: Tulip)
 
   -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|all] (Default: blue)
   -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)s)
   -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
 
-  -i, --icon VARIANT      Specify icon variant(s) for shell panel activities button
-                          [default|apple|simple|gnome|ubuntu|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin|endeavouros|tux|nixos|gentoo|budgie|solus]
-                          (Default: ChromeOS style)
-
-  --tweaks                Specify versions for tweaks [solid|compact|black|primary|macos|submenu|(nord/dracula)] (Options can mix)
+  --tweaks                Specify versions for tweaks [solid|compact|black|primary|macos|(nord/dracula)] (Options can mix)
                           1. solid              No transparency panel variant
                           2. compact            No floating panel variant
                           3. black              Full black variant
                           4. primary            Change radio icon checked color to primary theme color (Default is Green)
                           5. macos              Change window buttons to macOS style
-                          6. submenu            Set normal submenus color contrast (dark submenu style on dark version)
-                          7. [nord|dracula]     Nord/dracula colorscheme themes (nord and dracula can not mix use!)
-                          8. dock               Fix style for 'dash-to-dock' or 'ubuntu-dock' extension
+                          6. [nord|dracula]     Nord/dracula colorscheme themes (nord and dracula can not mix use!)
 
   --round                 Change theme round corner border-radius [Input the px value you want] (Suggested: 2px < value < 16px)
                           1. 3px
@@ -35,6 +29,7 @@ OPTIONS:
                           3. 5px
                           ...
                           13. 15px
+
 
   -r, --remove,
   -u, --uninstall         Uninstall/Remove installed themes
@@ -101,11 +96,6 @@ while [[ "$#" -gt 0 ]]; do
             echo -e "Install macOS style window button version ..."
             shift
             ;;
-          submenu)
-            submenu="true"
-            echo -e "Install with themed sub-menus ..."
-            shift
-            ;;
           nord)
             nord="true"
             ctype="-Nord"
@@ -135,7 +125,6 @@ while [[ "$#" -gt 0 ]]; do
       done
       ;;
     -t|--theme)
-      accent='true'
       shift
       for variant in "$@"; do
         case "$variant" in
@@ -241,103 +230,6 @@ while [[ "$#" -gt 0 ]]; do
             exit 1
             ;;
         esac
-      done
-      ;;
-    -i|--icon)
-      activities='icon'
-      shift
-      for icons in "$@"; do
-        case "$icons" in
-          default)
-            icon='-default'
-            shift
-            ;;
-          apple)
-            icon='-apple'
-            shift
-            ;;
-          simple)
-            icon='-simple'
-            shift
-            ;;
-          gnome)
-            icon='-gnome'
-            shift
-            ;;
-          ubuntu)
-            icon='-ubuntu'
-            shift
-            ;;
-          arch)
-            icon='-arch'
-            shift
-            ;;
-          manjaro)
-            icon='-manjaro'
-            shift
-            ;;
-          fedora)
-            icon='-fedora'
-            shift
-            ;;
-          debian)
-            icon='-debian'
-            shift
-            ;;
-          void)
-            icon='-void'
-            shift
-            ;;
-          opensuse)
-            icon='-opensuse'
-            shift
-            ;;
-          popos)
-            icon='-popos'
-            shift
-            ;;
-          mxlinux)
-            icon='-mxlinux'
-            shift
-            ;;
-          zorin)
-            icon='-zorin'
-            shift
-            ;;
-          endeavouros)
-            icon='-endeavouros'
-            shift
-            ;;
-          tux)
-            icon='-tux'
-            shift
-            ;;
-          nixos)
-            icon='-nixos'
-            shift
-            ;;
-          gentoo)
-            icon='-gentoo'
-            shift
-            ;;
-          budgie)
-            icon='-budgie'
-            shift
-            ;;
-          solus)
-            icon='-solus'
-            shift
-            ;;
-          -*)
-            break
-            ;;
-          *)
-            echo "ERROR: Unrecognized icon variant '$1'."
-            echo "Try '$0 --help' for more information."
-            exit 1
-            ;;
-        esac
-        echo "Install $icons icon for gnome-shell panel..."
       done
       ;;
     -h|--help)

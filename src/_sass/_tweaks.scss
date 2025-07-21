@@ -3,12 +3,6 @@
 
 $colorscheme: 'default';
 
-// Gnome-shell panel style
-$panel_style: 'float';
-
-// Gnome-shell Activities style
-$activities: 'normal';
-
 // transparent opacity
 $opacity: 'default';
 
@@ -34,12 +28,3 @@ $corner_style: 'default';
 } @else {
   $corner_style: 'square';
 }
-
-// Default sub-menu styling
-$submenu_style: 'false';
-
-// Gnome version
-$gnome_version: 'old';
-
-// Accent type
-$accent_type: 'default';

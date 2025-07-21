@@ -237,12 +237,6 @@ StScrollBar {
   background-image: url("#{$asset_path}/toggle-off.svg");
 
   &:checked { background-image: url("#{$asset_path}/toggle-on.svg"); }
-
-  @if $submenu_style == 'false' and $variant == 'dark' {
-    .popup-sub-menu & {
-      background-image: url("#{$asset_path}/menu-toggle-off.svg");
-    }
-  }
 }
 
 //
@@ -1419,39 +1413,24 @@ $submenu_item_radius: $popup-radius - $space-size;
     padding: $space-size / 2 0;
     border-radius: $submenu_item_radius;
 
-    @if $submenu_style == 'true' {
       color: $text !important;
       background-color: $fill !important;
-    } @else {
-      color: rgba(black, 0.75) !important;
-      background-color: if($variant == 'light', rgba(black, 0.10), rgba(white, 0.95)) !important;
-    }
+    
 
     .popup-menu-item {
       padding: 0;
       spacing: 0;
       margin: 0 $space-size / 2;
       border-radius: $corner-radius;
-
-      @if $submenu_style == 'true' {
-        color: $text !important;
-      } @else {
-        color: rgba(black, 0.75) !important;
-      }
+      color: $text !important;
 
       &:ltr { padding-left: $space-size; }
       &:rtl { padding-right: $space-size; }
 
       &:active {
         border-image: none; // image independent
-
-        @if $submenu_style == 'true' {
-          color: $text !important;
-          background-color: $divider !important;
-        } @else {
-          color: rgba(black, 0.75) !important;
-          background-color: on(white, divider) !important;
-        }
+        color: $text !important;
+        background-color: $divider !important;
       }
 
       StIcon { min-width: 22px; } // indentation
@@ -1881,13 +1860,8 @@ $submenu_item_radius: $popup-radius - $space-size;
   margin-top: 6px;
   border-radius: $submenu_item_radius;
 
-  @if $submenu_style == 'true' {
-    color: $text !important;
-    background-color: $fill !important;
-  } @else {
-    color: rgba(black, 0.75) !important;
-    background-color: if($variant == 'light', rgba(black, 0.10), rgba(white, 0.95)) !important;
-  }
+  color: $text !important;
+  background-color: $fill !important;
 
   > StBoxLayout:first-child {
     padding: 5px 10px 10px 10px;
@@ -1897,14 +1871,8 @@ $submenu_item_radius: $popup-radius - $space-size;
       width: 24px;
       height: 24px;
       border-radius: $circular-radius;
-
-      @if $submenu_style == 'true' {
-        &:hover { background-color: $divider !important; }
-        &:active { background-color: $track !important; }
-      } @else {
-        &:hover { background-color: on(white, divider) !important; }
-        &:active { background-color: on(white, track) !important; }
-      }
+      &:hover { background-color: $divider !important; }
+      &:active { background-color: $track !important; }
 
       StIcon { icon-size: 16px; }
     }

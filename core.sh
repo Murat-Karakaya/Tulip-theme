@@ -1,8 +1,6 @@
 REPO_DIR="$(dirname "$(readlink -m "${0}")")"
 SRC_DIR="$REPO_DIR/src"
 
-source "${REPO_DIR}/gtkrc.sh"
-
 ROOT_UID=0
 DEST_DIR=
 
@@ -30,7 +28,6 @@ COLOR_VARIANTS=('' '-Light' '-Dark')
 SIZE_VARIANTS=('' '-Compact')
 
 ctype=
-icon='-default'
 
 # Check command availability
 function has_command() {
@@ -44,7 +41,6 @@ install() {
   local color="$4"
   local size="$5"
   local ctype="$6"
-  local icon="$7"
 
   if [[ "$color" == '-Dark' ]]; then
     local ELSE_DARK="$color"
@@ -147,10 +143,6 @@ round_corner() {
   sed -i "/\$default_corner:/s/12px/${corner}/" $SRC_DIR/_sass/_tweaks-temp.scss
 }
 
-install_submenu() {
-  sed -i "/\$submenu_style:/s/false/true/" $SRC_DIR/_sass/_tweaks-temp.scss
-}
-
 install_nord() {
   sed -i "/\@import/s/color-palette-default/color-palette-nord/" $SRC_DIR/_sass/_tweaks-temp.scss
   sed -i "/\$colorscheme:/s/default/nord/" $SRC_DIR/_sass/_tweaks-temp.scss
@@ -159,18 +151,6 @@ install_nord() {
 install_dracula() {
   sed -i "/\@import/s/color-palette-default/color-palette-dracula/" $SRC_DIR/_sass/_tweaks-temp.scss
   sed -i "/\$colorscheme:/s/default/dracula/" $SRC_DIR/_sass/_tweaks-temp.scss
-}
-
-activities_style() {
-  sed -i "/\$activities:/s/normal/icon/" $SRC_DIR/_sass/_tweaks-temp.scss
-}
-
-gnome_version() {
-  sed -i "/\$gnome_version:/s/old/new/" $SRC_DIR/_sass/_tweaks-temp.scss
-}
-
-accent_type() {
-  sed -i "/\$accent_type:/s/default/fixed/" $SRC_DIR/_sass/_tweaks-temp.scss
 }
 
 install_theme_color() {
@@ -232,28 +212,12 @@ theme_tweaks() {
     install_mac
   fi
 
-  if [[ "$submenu" == "true" ]] ; then
-    install_submenu
-  fi
-
   if [[ "$nord" == "true" ]] ; then
     install_nord
   fi
 
   if [[ "$dracula" == "true" ]] ; then
     install_dracula
-  fi
-
-  if [[ "$activities" = "icon" ]] ; then
-    activities_style
-  fi
-
-  if [[ "$GNOME_SHELL" = "true" && ("$GS_VERSION" = "47-0" || "$GS_VERSION" = "48-0") ]] ; then
-    gnome_version
-  fi
-
-  if [[ "$fixed" = "true" || "$dracula" == "true" || "$nord" == "true" ]] ; then
-    accent_type
   fi
 }
 
@@ -281,7 +245,7 @@ install_theme() {
   for theme in "${themes[@]}"; do
     for color in "${colors[@]}"; do
       for size in "${sizes[@]}"; do
-        install "${dest:-$DEST_DIR}" "${_name:-$THEME_NAME}" "$theme" "$color" "$size" "$ctype" "$icon"
+        install "${dest:-$DEST_DIR}" "${_name:-$THEME_NAME}" "$theme" "$color" "$size" "$ctype"
       done
     done
   done
