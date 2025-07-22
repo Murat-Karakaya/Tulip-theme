@@ -76,12 +76,12 @@ install() {
   cp -r "$SRC_DIR/cinnamon/assets${ELSE_DARK:-}/"*.svg                                       "$THEME_DIR/cinnamon/assets"
   cp -r "$SRC_DIR/cinnamon/theme$theme$ctype/add-workspace-active${ELSE_DARK:-}.svg"         "$THEME_DIR/cinnamon/assets/add-workspace-active.svg"
   cp -r "$SRC_DIR/cinnamon/theme$theme$ctype/corner-ripple${ELSE_DARK:-}.svg"                "$THEME_DIR/cinnamon/assets/corner-ripple.svg"
-  cp -r "$SRC_DIR/cinnamon/theme$theme$ctype/toggle-on${ELSE_DARK:-}.svg"                    "$THEME_DIR/cinnamon/assets/toggle-on.svg"
 
   if [[ "$primary" == 'true' ]]; then
     cp -r "$SRC_DIR/cinnamon/theme$theme$ctype/checkbox${ELSE_DARK:-}.svg"                   "$THEME_DIR/cinnamon/assets/checkbox.svg"
     cp -r "$SRC_DIR/cinnamon/theme$theme$ctype/radiobutton${ELSE_DARK:-}.svg"                "$THEME_DIR/cinnamon/assets/radiobutton.svg"
     cp -r "$SRC_DIR/cinnamon/theme$theme$ctype/toggle-off${ELSE_DARK:-}.svg"                "$THEME_DIR/cinnamon/assets/toggle-off.svg"
+    cp -r "$SRC_DIR/cinnamon/theme$theme$ctype/toggle-on${ELSE_DARK:-}.svg"                    "$THEME_DIR/cinnamon/assets/toggle-on.svg"
   fi
 
   sassc $SASSC_OPT "$SRC_DIR/cinnamon/cinnamon${ELSE_DARK:-}$size.scss"                      "$THEME_DIR/cinnamon/cinnamon.css"

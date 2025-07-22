@@ -252,6 +252,9 @@ StScrollBar {
 //
 // Tooltip
 //
+
+$tooltip: if($opacity == 'solid', $tooltip, rgba($tooltip, 0.97));
+
 #Tooltip {
   border-radius: $small-radius;
   border: 1px solid on($tooltip);
@@ -271,6 +274,7 @@ StScrollBar {
 
 $menu_bg: if($opacity == 'solid', $popover, rgba($popover, 0.97));
 $submenu_item_radius: $popup-radius - $space-size;
+$submenu_border_color: if($check_radio == 'default', $text, $primary);
 
 .menu,
 .popup-menu,
@@ -287,29 +291,29 @@ $submenu_item_radius: $popup-radius - $space-size;
     border-radius: $submenu_item_radius;
     background-gradient-direction: none;
     box-shadow: none;
-    border: 1px solid $text;
-    color: $text !important;
-    background-color: $fill !important;
+    border: 1px solid $submenu_border_color;
+    color: $text;
+    background-color: $fill;
 
     .popup-menu-item {
-      color: $text !important;
+      color: $text;
 
       &:active {
-        color: $text !important;
-        background-color: $divider !important;
+        color: $text;
+        background-color: $divider;
       }
 
       &:active .popup-inactive-menu-item {
-        color: $text-disabled !important;
+        color: $text-disabled;
       }
 
       &:insensitive {
-        color: $text-secondary-disabled !important;
+        color: $text-secondary-disabled;
       }
     }
 
     .popup-inactive-menu-item {
-      color: $text-secondary-disabled !important;
+      color: $text-secondary-disabled;
     }
 
     StScrollBar {
@@ -1507,6 +1511,21 @@ $submenu_item_radius: $popup-radius - $space-size;
 //
 // OSD
 //
+ 
+.workspace-switch-osd, .info-osd, .media-keys-osd {
+  background-color: $panel;
+  border-radius: $circular-radius;
+  border: 1px solid lighten($panel, 10%);
+  text-align: center;
+  padding: 24px; 
+  color: white;
+}
+
+.workspace-switch-osd, .media-keys-osd, .message-dialog-content .message-dialog-title.lightweight {
+  font-weight: 700;
+  font-size: 1.182em;
+}
+
 .info-osd {
   text-align: center;
   font-weight: bold;
@@ -1543,6 +1562,72 @@ $submenu_item_radius: $popup-radius - $space-size;
     background-color: $primary;
   }
 }
+
+
+.workspace-switch-osd {
+  min-width: 140px;
+  margin-bottom: 1em;
+  padding: 12px 36px 0 36px;
+}
+.workspace-switch-osd-indicator-box {
+  spacing: 12px;
+}
+.workspace-switch-osd-indicator {
+  background-color: if($check_radio == 'default', transparentize($osd-color, 0.2), white);
+  padding: 3px;
+  margin: 15px;
+  border-radius: $circular-radius; 
+}
+.workspace-switch-osd-indicator:active {
+  background-color: $osd-color;
+  padding: 6px;
+  margin: 12px; 
+}
+
+
+
+
+.media-keys-osd {
+  margin-bottom: 1em;
+  border-radius: $circular-radius;
+  font-weight: bold;
+  spacing: 12px;
+  padding: 12px 24px; 
+}
+
+.media-keys-osd {
+  > * {
+    spacing: 12px; 
+  }
+  StIcon {
+    icon-size: 32px; 
+  }
+  StLabel:ltr {
+    margin-right: 6px;
+  }
+  StLabel:rtl {
+    margin-left: 6px;
+  }
+  .level {
+    min-width: 160px;
+    -barlevel-height: 6px;
+    -barlevel-background-color: darken($panel, 3%);
+    -barlevel-active-background-color: $osd-color;
+    -barlevel-amplify-color: $osd-color;
+    -barlevel-amplify-separator-width: 3px; 
+  }
+  .level:ltr {
+    margin-right: 6px; 
+  }
+  .level:rtl {
+    margin-left: 6px;
+  }
+  .level-bar {
+    border-radius: $circular-radius;
+    background-color: $osd-color;
+  }
+}
+
 
 //
 // Window list (windowList.js)
@@ -2204,15 +2289,6 @@ $submenu_item_radius: $popup-radius - $space-size;
   background-color: $tooltip;
   padding: 12px;
   padding-bottom: 16px;
-}
-
-//
-// Workspace OSD
-//
-.workspace-osd {
-  text-shadow: black 5px 5px 5px;
-  font-weight: bold;
-  font-size: 48pt;
 }
 
 //
