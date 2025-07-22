@@ -104,7 +104,7 @@ stage {
 // Looking Glass
 //
 #LookingGlassDialog {
-  background-color: if($opacity == 'default', rgba($base, 0.97), $base);
+  background-color: if($opacity == 'transparent', rgba($base, 0.97), $base);
   spacing: $space-size;
   padding: $space-size $space-size * 2;
   border: none;
@@ -1731,7 +1731,7 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
       background-gradient-direction: vertical;
       background-gradient-start: $success;
       background-gradient-end: $success;
-      border-radius: 0px $small-radius $small-radius 0px;
+      border-radius: 0px;
       box-shadow: none;
     }
   }
@@ -1870,7 +1870,7 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
       background-gradient-direction: vertical;
       background-gradient-start: $success;
       background-gradient-end: $success;
-      border-radius: 0px $small-radius $small-radius 0px;
+      border-radius: 0px;
       box-shadow: none;
     }
   }

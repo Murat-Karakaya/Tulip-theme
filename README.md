@@ -32,7 +32,8 @@ OPTIONS:
                           1. solid              No transparency panel variant
                           2. compact            Smaller icons in panel variant
                           3. black              Full black variant
-                          4. primary            Change radio icon checked color to primary theme color (Default is Green)
+                          4. primary            Use primary theme color on other elements too (like radio button, toggles and osd's)
+                          5. transparent        Make some elements semi-transparent (panels, popup menus, applets etc.)
                           6. [nord|dracula]     Nord/dracula colorscheme themes (nord and dracula can not mix use!)
 
   --round                 Change theme round corner border-radius [Input the px value you want] (Suggested: 2px < value < 16px)

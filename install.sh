@@ -19,8 +19,9 @@ OPTIONS:
                           1. solid              No transparency panel variant
                           2. compact            Smaller icons in panel variant
                           3. black              Full black variant
-                          4. primary            Change radio icon checked color to primary theme color (Default is Green)
-                          5. [nord|dracula]     Nord/dracula colorscheme themes (nord and dracula can not mix use!)
+                          4. primary            Use primary theme color on other elements too (like radio button, toggles and osd's)
+                          5. transparent        Make some elements semi-transparent (panels, popup menus, applets etc.)
+                          6. [nord|dracula]     Nord/dracula colorscheme themes (nord and dracula can not mix use!)
 
   --round                 Change theme round corner border-radius [Input the px value you want] (Suggested: 2px < value < 16px)
                           1. 3px
@@ -70,9 +71,9 @@ while [[ "$#" -gt 0 ]]; do
       shift
       for variant in $@; do
         case "$variant" in
-          solid)
-            opacity="solid"
-            echo -e "Install solid version ..."
+          transparent)
+            opacity="transparent"
+            echo -e "Install transparent version ..."
             shift
             ;;
           compact)
@@ -90,11 +91,6 @@ while [[ "$#" -gt 0 ]]; do
             echo "Change radio and check assets color ..."
             shift
             ;;
-          macos)
-            macstyle="true"
-            echo -e "Install macOS style window button version ..."
-            shift
-            ;;
           nord)
             nord="true"
             ctype="-Nord"
@@ -105,11 +101,6 @@ while [[ "$#" -gt 0 ]]; do
             dracula="true"
             ctype="-Dracula"
             echo -e "Install dracula colorscheme ..."
-            shift
-            ;;
-          dock)
-            dockfix="true"
-            echo -e "\nFix 'dash-to-dock' or 'ubuntu-dock' style ..."
             shift
             ;;
           -*)

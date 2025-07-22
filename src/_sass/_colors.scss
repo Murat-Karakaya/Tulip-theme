@@ -129,7 +129,7 @@ $titlebar-backdrop:                     if($topbar == 'dark', background(h), bac
 $popover:                               if($variant == 'light', background(a), background(e));
 
 $panel-solid:                           if($topbar == 'dark', background(e), background(c)); // for Unity panel which doesn't allow translucent colors
-$panel:                                 if($opacity == 'default', rgba($panel-solid, 0.65), $panel-solid);
+$panel:                                 if($opacity == 'transparent', rgba($panel-solid, 0.65), $panel-solid);
 $shell:                                 if($topbar == 'dark', rgba(black, 0.65), background(c)); // for gnome-shell
 
 $button:                                gtkalpha(currentColor, 0.05);
