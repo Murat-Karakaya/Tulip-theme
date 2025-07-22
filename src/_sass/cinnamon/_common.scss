@@ -1785,7 +1785,7 @@ $submenu_item_radius: $popup-radius - $space-size;
       background-gradient-direction: vertical;
       background-gradient-start: $success;
       background-gradient-end: $success;
-      border-radius: $corner-radius;
+      border-radius: 0px $small-radius $small-radius 0px;
       box-shadow: none;
     }
   }
