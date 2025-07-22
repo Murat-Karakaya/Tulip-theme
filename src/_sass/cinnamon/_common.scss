@@ -415,6 +415,7 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
 
   &Left {
     spacing: 4px;
+    padding: 0px;
 
     &:dnd {
       border-radius: 0px $small-radius $small-radius 0px;
@@ -425,7 +426,8 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
     &:rtl { padding-left: 4px; }
 
     &.vertical {
-      padding: 0;
+      padding: 0px 0px 10px 0px;
+      border-radius: 0px 0px $small-radius $small-radius;
 
       &:ltr { padding-right: 0px; }
       &:rtl { padding-left: 0px; }
@@ -433,6 +435,8 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
   }
 
   &Right {
+    padding: 0;
+
     &:dnd {
       border-radius: $small-radius 0px 0px $small-radius;
       background-color: rgba(0, 0, 255, 0.2);
@@ -442,8 +446,10 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
     &:rtl { padding-right: $space-size; spacing: 0px; }
 
     &.vertical {
-      padding: 0;
-
+      padding: 10px 0px 0px 0px;
+      &:dnd {
+        border-radius: $small-radius $small-radius 0px 0px;
+      }
       &:ltr { padding-right: 0px; }
       &:rtl { padding-left: 0px; }
     }
@@ -451,6 +457,11 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
 
   &Center {
     spacing: 4px;
+    padding: 0px 10px 0px 10px;
+
+    &.vertical {
+      padding: 10px 0px 10px 0px;
+    }
 
     &:dnd {
       border-radius: $small-radius;
