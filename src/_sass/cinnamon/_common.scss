@@ -1843,10 +1843,12 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
 
     &.left {
       border-left: 2px solid transparent;
+      padding: 5px 0;
     }
 
     &.right {
       border-right: 2px solid transparent;
+      padding: 5px 0;
     }
 
     &:hover {
