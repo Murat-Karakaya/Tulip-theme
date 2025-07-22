@@ -2043,6 +2043,10 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
   padding-top: 4px;
   transition-duration: 300;
 
+  &.vertical {
+    height: 1.3em;
+  }
+
   &:outlined, &:outlined:hover { color: $primary; }
   &:hover { color: lighten($primary, 10%) }
 }
