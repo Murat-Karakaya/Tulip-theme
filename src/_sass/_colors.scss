@@ -201,14 +201,3 @@ $primary-track-disabled:                on($primary, track-disabled);
 $primary-divider:                       on($primary, divider);
 $primary-secondary-fill:                on($primary, secondary-fill);
 $primary-fill:                          on($primary, fill);
-
-//
-// Titlebutton colors
-//
-
-$titlebutton-close:                      $button-close;
-$titlebutton-max:                        $button-max;
-$titlebutton-min:                        $button-min;
-
-// workaround for GTK3 @placeholder_text_color which doesn't allow translucent colors
-$placeholder_text_color:                if($variant == 'light', mix(black, $base, 60%), mix(white, $base, 70%));
