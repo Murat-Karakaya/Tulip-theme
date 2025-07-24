@@ -29,7 +29,7 @@
   $brightness: (red($color) * 299 + green($color) * 587 + blue($color) * 114) / 1000;
 
   @if ($brightness >= 156) {
-    @if ($state == 'primary') { @return rgba(black, 0.87); }
+    @if ($state == 'primary') { @return rgba(rgb(0, 0, 0), 0.8); }
     @if ($state == 'secondary') { @return rgba(black, 0.6); }
     @if ($state == 'disabled') { @return rgba(black, 0.38); }
     @if ($state == 'secondary-disabled') { @return rgba(black, 0.26); }
@@ -39,7 +39,7 @@
     @if ($state == 'secondary-fill') { @return rgba(black, 0.08); }
     @if ($state == 'fill') { @return rgba(black, 0.04); }
   } @else {
-    @if ($state == 'primary') { @return white; }
+    @if ($state == 'primary') { @return rgba(255, 255, 255, 0.83); }
     @if ($state == 'secondary') { @return rgba(white, 0.7); }
     @if ($state == 'disabled') { @return rgba(white, 0.5); }
     @if ($state == 'secondary-disabled') { @return rgba(white, 0.3); }
