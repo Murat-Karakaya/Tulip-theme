@@ -35,6 +35,8 @@ function has_command() {
 }
 
 install() {
+  theme_tweaks && install_theme_color
+
   local dest="$1"
   local name="$2"
   local theme="$3"
@@ -46,19 +48,25 @@ install() {
     local ELSE_DARK="$color"
     local icon_color='-dark'
     local else_icon_dark="$icon_color"
+    sed -i "/\$variant:/s/light/dark/" $SRC_DIR/_sass/_tweaks-temp.scss
   fi
 
   if [[ "$color" == '-Light' ]]; then
     local ELSE_LIGHT="$color"
     local icon_color='-light'
     local else_icon_light="$icon_color"
+    sed -i "/\$topbar:/s/dark/light/" $SRC_DIR/_sass/_tweaks-temp.scss
+  fi
+
+  if [[ "$size" == '-Compact' ]]; then
+    sed -i "/\$compact:/s/false/true/" $SRC_DIR/_sass/_tweaks-temp.scss
   fi
 
   local THEME_DIR="${1}/${2}${3}${4}${5}${6}"
 
   [[ -d "$THEME_DIR" ]] && rm -rf "$THEME_DIR"
 
-  theme_tweaks && install_theme_color
+
 
   echo "Installing '$THEME_DIR'..."
 
@@ -84,7 +92,7 @@ install() {
     cp -r "$SRC_DIR/cinnamon/theme$theme$ctype/toggle-on${ELSE_DARK:-}.svg"                    "$THEME_DIR/cinnamon/assets/toggle-on.svg"
   fi
 
-  sassc $SASSC_OPT "$SRC_DIR/cinnamon/cinnamon${ELSE_DARK:-}$size.scss"                      "$THEME_DIR/cinnamon/cinnamon.css"
+  sassc $SASSC_OPT "$SRC_DIR/cinnamon/cinnamon.scss"                      "$THEME_DIR/cinnamon/cinnamon.css"
 
   cp -r "$SRC_DIR/cinnamon/thumbnails/thumbnail$theme${ELSE_DARK:-}$ctype.png"               "$THEME_DIR/cinnamon/thumbnail.png"
 }
