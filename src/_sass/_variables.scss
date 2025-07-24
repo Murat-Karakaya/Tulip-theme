@@ -15,7 +15,7 @@ $blackness-asset-suffix: if($blackness == 'false' or $topbar == 'light', '', '-b
 // Sizes
 //
 
-$space-size: if($compact == 'false', 6px, 4px);
+$space-size: if($compact == 'false', 6px, 3px);
 $margin-size: if($compact == 'false', 4px, 2px);
 $small-size: if($compact == 'false', 24px, 22px);
 $medium-size: if($compact == 'false', 36px, 32px);

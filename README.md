@@ -1,6 +1,6 @@
-# Tulip theme
+# Nergis theme
 
-Tulip is a [Material Design](https://material.io) theme made for Cinnamon desktop environment (often used by Linux Mint).
+Nergis is a [Material Design](https://material.io) theme made for Cinnamon desktop environment (often used by Linux Mint).
 It is ased on [Orchis-theme](https://github.com/vinceliuice/Orchis-theme)
 
 ![screenshot](images/screenshot.png?raw=true)
@@ -22,7 +22,7 @@ Run the following commands in the terminal:
 ```
 OPTIONS:
   -d, --dest DIR          Specify destination directory (Default: $HOME/.themes)
-  -n, --name NAME         Specify theme name (Default: Tulip)
+  -n, --name NAME         Specify theme name (Default: Nergis)
 
   -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|all] (Default: blue)
   -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)s)
@@ -50,6 +50,6 @@ OPTIONS:
   -h, --help              Show help
 ```
 
-## Tweaks for Tulip
+## Tweaks for Nergis
 
 ![tweaks-view](images/tweaks-view.png?raw=true)

@@ -2,7 +2,7 @@
 
 THEME_DIR=$(cd $(dirname $0) && pwd)
 
-THEME_NAME=Tulip
+THEME_NAME=Nergis
 
 _COLOR_VARIANTS=('' '-Light' '-Dark')
 _COMPA_VARIANTS=('' '-Compact')

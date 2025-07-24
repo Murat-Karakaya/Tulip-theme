@@ -22,7 +22,7 @@ fi
 
 SASSC_OPT="-M -t expanded"
 
-THEME_NAME=Tulip
+THEME_NAME=Nergis
 THEME_VARIANTS=('' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-Grey')
 COLOR_VARIANTS=('' '-Light' '-Dark')
 SIZE_VARIANTS=('' '-Compact')
