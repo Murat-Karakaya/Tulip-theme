@@ -1530,7 +1530,7 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
   border: 1px solid lighten($panel-solid, 10%);
   text-align: center;
   padding: 24px; 
-  color: $text;
+  color: on($panel-solid, primary);
 }
 
 .workspace-switch-osd, .media-keys-osd, .message-dialog-content .message-dialog-title.lightweight {
@@ -1543,7 +1543,7 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
   font-weight: bold;
   spacing: 1em;
   padding: 16px;
-  color: $text;
+  color: on($panel-solid, primary);
 }
 
 .osd-window {
@@ -1584,7 +1584,7 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
   spacing: 12px;
 }
 .workspace-switch-osd-indicator {
-  background-color: if($check_radio == 'default', transparentize($osd-color, 0.2), $text);
+  background-color: if($check_radio == 'default', transparentize($osd-color, 0.2), on($panel-solid, primary));
   padding: 3px;
   margin: 15px;
   border-radius: $circular-radius; 
