@@ -1831,7 +1831,7 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
     transition-duration: 100ms;
     border: none;
     margin: 0;
-    color: rgba($text, 0.6);
+    color: rgba(on($panel-solid, primary), 0.6);
     border-radius: 0;
     spacing: $space-size;
 
@@ -1851,13 +1851,13 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
     }
 
     &:hover {
-      color: $text;
+      color: rgba(on($panel-solid, primary), 0.6);
       background-gradient-direction: none;
       background-color: rgba(on($panel-solid, secondary), 0.15);
     }
 
     &:active {
-      color: $text;
+      color: rgba(on($panel-solid, primary), 0.6);
       background-gradient-direction: none;
       background-color: transparent;
       border-color: on($panel, track);
@@ -1868,7 +1868,7 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
     }
 
     &:focus {
-      color: $text;
+      color: rgba(on($panel-solid, primary), 0.6);
       background-gradient-direction: none;
       background-color: rgba(on($panel-solid, secondary), 0.2);
       border-color: $primary;
@@ -2161,7 +2161,7 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
 
   &-box {
     padding: 0 $space-size;
-    color: $text;
+    color: on($panel-solid, primary);
     text-shadow: none;
     transition-duration: 100ms;
     border-radius: 0;
@@ -2172,12 +2172,12 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
     }
 
     &:hover {
-      color: $text;
+      color: on($panel-solid, primary);
       background-color: rgba(on($panel-solid, secondary), 0.15);
     }
 
     &:checked, &:checked:hover {
-      color: $text;
+      color: on($panel-solid, primary);
       background-color: rgba(on($panel-solid, secondary), 0.25);
     }
 
@@ -2190,10 +2190,10 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
 
   &-label {
     font-weight: bold;
-    color: $text;
+    color: on($panel-solid, primary);
 
     .applet-box:checked & {
-      color: $text;
+      color: on($panel-solid, primary);
       text-shadow: none;
     }
   }
