@@ -1,10 +1,13 @@
 #! /usr/bin/env bash
 
+# Change to the script's directory
+cd "$(dirname "$0")" || exit
+
 for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-Grey'; do
   for type in '' '-Nord' '-Dracula'; do
     case "$theme" in
       '')
-        theme_color_dark='#006eff'
+        theme_color_dark='#3281EA'
         theme_color_light='#1A73E8'
         ;;
       -Purple)
@@ -107,7 +110,7 @@ for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-
           theme_color_light='#ffb86c'
           ;;
         -Yellow)
-          theme_color_dark='#e8f467'
+          theme_color_dark='#ffe100'
           theme_color_light='#f1fa8c'
           ;;
         -Green)
@@ -125,17 +128,25 @@ for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-
       esac
     fi
 
+    # Create a mixed-variant thumbnail
+    cp -f "thumbnail.svg" "thumbnail${theme}${type}.svg"
+    sed -i "s/#1A73E8/${theme_color_light}/g" "thumbnail${theme}${type}.svg"
+    sed -i "s/#3281EA/${theme_color_dark}/g" "thumbnail${theme}${type}.svg"
     if [[ "$type" != '' ]]; then
-      rm -rf "thumbnail${theme}${type}.svg"
-      cp -rf "thumbnail.svg" "thumbnail${theme}${type}.svg"
-      sed -i "s/#1A73E8/${theme_color_dark}/g" "thumbnail${theme}${type}.svg"
-      sed -i "s/#3281EA/${theme_color_light}/g" "thumbnail${theme}${type}.svg"
-      sed -i "s/#212121/${panel_dark}/g" "thumbnail${theme}${type}.svg"
-    elif [[ "$theme" != '' ]]; then
-      rm -rf "thumbnail${theme}.svg"
-      cp -rf "thumbnail.svg" "thumbnail${theme}.svg"
-      sed -i "s/#1A73E8/${theme_color_dark}/g" "thumbnail${theme}.svg"
-      sed -i "s/#3281EA/${theme_color_light}/g" "thumbnail${theme}.svg"
+      sed -i "s/#1C1C1C/${panel_dark}/g" "thumbnail${theme}${type}.svg"
+    fi
+
+    # Create a light-variant thumbnail
+    cp -f "thumbnail-Light.svg" "thumbnail${theme}${type}-Light.svg"
+    sed -i "s/#1A73E8/${theme_color_light}/g" "thumbnail${theme}${type}-Light.svg"
+    sed -i "s/#3281EA/${theme_color_dark}/g" "thumbnail${theme}${type}-Light.svg"
+
+    # Create a dark-variant thumbnail
+    cp -f "thumbnail-Dark.svg" "thumbnail${theme}${type}-Dark.svg"
+    sed -i "s/#1A73E8/${theme_color_light}/g" "thumbnail${theme}${type}-Dark.svg"
+    sed -i "s/#3281EA/${theme_color_dark}/g" "thumbnail${theme}${type}-Dark.svg"
+    if [[ "$type" != '' ]]; then
+      sed -i "s/#1C1C1C/${panel_dark}/g" "thumbnail${theme}${type}-Dark.svg"
     fi
   done
 done

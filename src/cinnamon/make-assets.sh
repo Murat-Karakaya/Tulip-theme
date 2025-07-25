@@ -6,7 +6,7 @@ for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-
   for type in '' '-Nord' '-Dracula'; do
     case "$theme" in
       '')
-        theme_color_dark='#006eff'
+        theme_color_dark='#3281EA'
         theme_color_light='#1A73E8'
         ;;
       -Purple)
@@ -107,7 +107,7 @@ for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-
           theme_color_light='#ffb86c'
           ;;
         -Yellow)
-          theme_color_dark='#e8f467'
+          theme_color_dark='#ffe100'
           theme_color_light='#f1fa8c'
           ;;
         -Green)
