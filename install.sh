@@ -243,7 +243,7 @@ if [[ "${#colors[@]}" -eq 0 ]] ; then
 fi
 
 if [[ "${#sizes[@]}" -eq 0 ]] ; then
-  sizes=("${SIZE_VARIANTS[@]}")
+  sizes=("${SIZE_VARIANTS[0]}")
 fi
 
 if [[ ${remove} == 'true' ]]; then
