@@ -407,6 +407,7 @@ $submenu_border_color: if($check_radio == 'default', $text, $primary);
   font-weight: bold;
   height: $medium-size;
   width: $medium-size + $space-size;
+  border-top: 1px solid background(e);
 
   &:highlight {
     border-image: none;
