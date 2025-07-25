@@ -94,7 +94,8 @@ install() {
 
   sassc $SASSC_OPT "$SRC_DIR/cinnamon/cinnamon.scss"                      "$THEME_DIR/cinnamon/cinnamon.css"
 
-  cp -r "$SRC_DIR/cinnamon/thumbnails/thumbnail$theme${ELSE_DARK:-}$ctype.png"               "$THEME_DIR/cinnamon/thumbnail.png"
+
+  cp -r "$SRC_DIR/cinnamon/thumbnails/thumbnail$theme$ctype$color.png"               "$THEME_DIR/cinnamon/thumbnail.png"
 }
 
 uninstall() {
