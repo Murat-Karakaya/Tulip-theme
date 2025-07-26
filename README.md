@@ -17,26 +17,27 @@ It is ased on [Orchis-theme](https://github.com/vinceliuice/Orchis-theme)
 
 ## Installation
 
-The easiest way to install is through the "themes" application in cinnamon. Altough customizition 
+**The easiest way to install is through the "themes" application in cinnamon. Altough there is no customizition this way**
 
 ### Manual Installation
 
-Run the following commands in the terminal:
+> Note: It is required to have `git` installed localy. You can installing through your software manager or terminal
+
+Once you have installed git, you can clone this repo.
+
+
+Once you cloned it. get inside cloned folder structure. And then you can run the following command in the terminal (Add additional options explained below if you want customizition):
 
 ```sh
-./install.sh
+./install.sh # It will install it using the default options.
 ```
 
-> [!TIP]
-> `./install.sh` allows the following options:
+`./install.sh` also allows the following options:
 
 ```
 OPTIONS:
   -d, --dest DIR          Specify destination directory (Default: $HOME/.themes)
   -n, --name NAME         Specify theme name (Default: Nergis)
-
-```
-```
 
   -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|all] (Default: blue)
 
