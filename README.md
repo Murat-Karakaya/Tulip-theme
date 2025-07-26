@@ -25,16 +25,20 @@ OPTIONS:
   -n, --name NAME         Specify theme name (Default: Nergis)
 
   -t, --theme VARIANT     Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|all] (Default: blue)
+
   -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)s)
-  -s, --size VARIANT      Specify size variant [standard|compact] (Default: All variants)
+                          Standard variant will have a dark panel and light popup elements.
+                          Light and dark variants will only have light and dark elements respectively. 
+
+  -s, --size VARIANT      Specify size variant [standard|compact] (standard)
+                          Compact mode will have smaller popup elements.
 
   --tweaks                Specify versions for tweaks [solid|compact|black|primary|macos|(nord/dracula)] (Options can mix)
-                          1. solid              No transparency panel variant
-                          2. compact            Smaller icons in panel variant
-                          3. black              Full black variant
-                          4. primary            Use primary theme color on other elements too (like radio button, toggles and osd's)
-                          5. transparent        Make some elements semi-transparent (panels, popup menus, applets etc.)
-                          6. [nord|dracula]     Nord/dracula colorscheme themes (nord and dracula can not mix use!)
+                          1. transparent        Make some elements semi-transparent (panels, popup menus, applets etc.)
+                          2. black              Dark elements will be pitch black. Recommended for people who need/want a color contrast.
+                                                Won't work on light elements.
+                          3. primary            Use primary theme color on other elements too (like radio button, toggles and osd's)
+                          4. [nord|dracula]     Nord/dracula colorscheme themes (nord and dracula can not mix use!)
 
   --round                 Change theme round corner border-radius [Input the px value you want] (Suggested: 2px < value < 16px)
                           1. 3px
@@ -44,8 +48,7 @@ OPTIONS:
                           13. 15px
 
 
-  -r, --remove,
-  -u, --uninstall         Uninstall/Remove installed themes
+  -r, --remove, -u, --uninstall         Uninstall/Remove installed themes
 
   -h, --help              Show help
 ```
