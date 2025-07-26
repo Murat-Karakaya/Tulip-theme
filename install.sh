@@ -20,7 +20,7 @@ OPTIONS:
   -s, --size VARIANT      Specify size variant [standard|compact] (standard)
                           Compact mode will have smaller popup elements.
 
-  --tweaks                Specify versions for tweaks [solid|compact|black|primary|macos|(nord/dracula)] (Options can mix)
+  --tweaks                Specify versions for tweaks [transparent|black|primary|(nord/dracula)] (Options can mix)
                           1. transparent        Make some elements semi-transparent (panels, popup menus, applets etc.)
                           2. black              Dark elements will be pitch black. Recommended for people who need/want a color contrast.
                                                 Won't work on light elements.
