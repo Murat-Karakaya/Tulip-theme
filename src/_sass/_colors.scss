@@ -148,7 +148,7 @@ $suggested:                             $primary;
 $destructive:                           $error;
 
 $check_radio_primary:                   if($check_radio == 'default', $success, $primary);
-$osd-color:                             if($check_radio == 'default', on($background), $primary);
+$osd-color:                             if($check_radio == 'default', on($panel-solid, primary), $primary);
 
 $frame:                                 if($variant == 'light', rgba(black, 0.1), rgba(black, 0.25)); // instead of shadows
 $border:                                if($variant == 'light', rgba(black, 0.12), rgba(white, 0.12));
