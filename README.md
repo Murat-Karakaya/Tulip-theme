@@ -1,7 +1,7 @@
 # Nergis theme
 
-Nergis is a [Material Design](https://material.io) theme made for Cinnamon desktop environment (often used by Linux Mint).
-It is ased on [Orchis-theme](https://github.com/vinceliuice/Orchis-theme)
+Nergis is a [Material Design](https://material.io) theme made for the Cinnamon desktop environment (often used by Linux Mint).
+It is based on [Orchis-theme](https://github.com/vinceliuice/Orchis-theme)
 
 ![screenshot](images/screenshot.png?raw=true)
 
@@ -17,19 +17,18 @@ It is ased on [Orchis-theme](https://github.com/vinceliuice/Orchis-theme)
 
 ## Installation
 
-**The easiest way to install is through the "themes" application in cinnamon. Altough there is no customizition this way**
+**The easiest way to install is through the "themes" application in Cinnamon. Although there is no customization this way.**
 
 ### Manual Installation
 
-> Note: It is required to have `git` installed localy. You can installing through your software manager or terminal
+> Note: It is required to have `git` installed locally. You can install it through your software manager or terminal.
 
 Once you have installed git, you can clone this repo.
 
-
-Once you cloned it. get inside cloned folder structure. And then you can run the following command in the terminal (Add additional options explained below if you want customizition):
+Once you have cloned it, get inside the cloned folder structure. Then you can run the following command in the terminal (Add additional options explained below if you want customization):
 
 ```sh
-./install.sh # It will install it using the default options.
+./install.sh # It will install using the default options.
 ```
 
 `./install.sh` also allows the following options:
@@ -46,7 +45,7 @@ OPTIONS:
   <img src="images/colors.png?raw=true" alt="themes"/>
 
 ```
-  -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)s)
+  -c, --color VARIANT     Specify color variant(s) [standard|light|dark] (Default: All variants)
                           Standard variant will have a dark panel and light popup elements.
                           Light and dark variants will only have light and dark elements respectively. 
 
@@ -105,7 +104,7 @@ OPTIONS:
 
 ### Primary
 
-Note that primary doesn't just affect the media osd. toggle elements and buttons are affected as well.
+Note that primary doesn't just affect the media OSD. Toggle elements and buttons are affected as well.
 
   | Default | Primary |
   |:----:|:--------:|
@@ -117,5 +116,5 @@ Note that primary doesn't just affect the media osd. toggle elements and buttons
 
   | Default | Dracula | Nord |
   |:----:|:--------:|:---:|
-  | <img style="border-radius: 7px;" src="images/no-tweak.png?raw=true" alt="No tweak" height="120"/> | <img style="border-radius: 7px;" src="images/dracula.png?raw=true" alt="dracula" height="120"/> | <img style="border-radius: 7px;" src="images/nord.png?raw=true" alt="dracula" height="120"/> |
+  | <img style="border-radius: 7px;" src="images/no-tweak.png?raw=true" alt="No tweak" height="120"/> | <img style="border-radius: 7px;" src="images/dracula.png?raw=true" alt="dracula" height="120"/> | <img style="border-radius: 7px;" src="images/nord.png?raw=true" alt="nord" height="120"/> |
 
